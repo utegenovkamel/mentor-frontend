@@ -1,12 +1,14 @@
 import { Button, Flex, Group, Stack, Title, Anchor } from '@mantine/core';
 import { FormProvider, useForm } from 'react-hook-form';
-import { FormInput, FormPasswordInput, FormTextarea } from '@/components/Fields';
+import { FormInput, FormPasswordInput, FormTagsInput, FormTextarea } from '@/components';
 import { FormDatePickerInput } from '@/components/Fields/FormDatePickerInput';
 import { Link } from 'react-router-dom';
 import React from 'react';
 
 export const CreateAccountPage = () => {
-  const form = useForm();
+  const form = useForm({
+    defaultValues: {},
+  });
 
   const onSubmit = form.handleSubmit((data) => {});
 
@@ -33,6 +35,12 @@ export const CreateAccountPage = () => {
               name={'passwordConfirmation'}
               label={'Подтвердите пароль'}
               required
+            />
+            <FormTagsInput
+              name={'tags'}
+              label="Чем ты занимаешься"
+              placeholder="Выберите способности"
+              data={['Разработка', 'Дизайн', 'Маркетинг', 'Продажи', 'Управление']}
             />
             <Group justify="space-between">
               <Anchor component={Link} to="/log-in" c="dimmed">

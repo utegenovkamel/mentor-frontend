@@ -1,7 +1,7 @@
 import React from 'react';
 import { Anchor, Button, Flex, Group, Stack, Title } from '@mantine/core';
 import { FormProvider, useForm } from 'react-hook-form';
-import { FormInput, FormPasswordInput } from '@/components/Fields';
+import { FormInput, FormPasswordInput } from '@/components';
 import { Link } from 'react-router-dom';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
