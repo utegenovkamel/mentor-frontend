@@ -6,8 +6,11 @@ import { Link } from 'react-router-dom';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { UserDto } from '@/types/user.interface';
+import { AuthService } from '@/shared/services/auth/auth.service';
 
-interface LoginForm extends Pick<UserDto, 'username' | 'password'> {}
+interface LoginForm extends Pick<UserDto, 'username'> {
+  password: string;
+}
 
 const validationSchema = yup.object({
   username: yup.string().required('Имя пользователя обязательно'),
@@ -22,8 +25,10 @@ export const LogInPage = () => {
     resolver: yupResolver(validationSchema),
   });
 
-  const onSubmit = form.handleSubmit((data: LoginForm) => {
-    console.log('data', data);
+  const onSubmit = form.handleSubmit(async (values: LoginForm) => {
+    console.log('values', values);
+    const data = AuthService.login(values);
+    console.log('res', data);
   });
 
   return (

@@ -4,11 +4,9 @@ import { SocialNetworkDto } from '@/types/social-network.interface';
 export interface UserDto {
   id: number;
   username: string;
-  password: string;
   name: string;
-  age: number;
-  phoneNumber: string;
-  email: string;
+  description: string;
+  birthDate: number;
   avatarPath: string;
   socialNetworks: SocialNetworkDto[];
   tags: TagDto[];

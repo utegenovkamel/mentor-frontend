@@ -1,16 +1,16 @@
-import { UserDto } from '@/types/user.interface'
+import { UserDto } from '@/types/user.interface';
 
 export interface ITokens {
-	accessToken: string
-	refreshToken: string
+  accessToken: string;
+  refreshToken: string;
 }
 
 export interface IAuthResponse extends ITokens {
-	user: UserDto
+  user: UserDto;
 }
 
-export interface ILoginRequest extends Pick<UserDto, 'email'> {
-	password: string
+export interface ILoginRequest extends Pick<UserDto, 'username'> {
+  password: string;
 }
 
 export interface IRegisterRequest extends UserDto {}
