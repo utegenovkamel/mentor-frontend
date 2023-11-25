@@ -1,7 +1,7 @@
 import React from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 import { NumberInput, NumberInputProps } from '@mantine/core';
-import { MakeRequired } from '@/shared/helpers/makeRequired.helper';
+import { MakeRequired } from '@/shared/helpers';
 
 interface Props extends MakeRequired<NumberInputProps, 'name'> {}
 

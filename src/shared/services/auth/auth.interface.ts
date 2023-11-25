@@ -1,4 +1,4 @@
-import { UserDto } from '@/types/user.interface';
+import { UserDto } from '@/shared/services/user/user.interface';
 
 export interface ITokens {
   accessToken: string;

@@ -5,7 +5,7 @@ import { FormInput, FormPasswordInput } from '@/components';
 import { Link } from 'react-router-dom';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { UserDto } from '@/types/user.interface';
+import { UserDto } from '@/shared/services/user/user.interface';
 import { AuthService } from '@/shared/services/auth/auth.service';
 
 interface LoginForm extends Pick<UserDto, 'username'> {
@@ -26,9 +26,7 @@ export const LogInPage = () => {
   });
 
   const onSubmit = form.handleSubmit(async (values: LoginForm) => {
-    console.log('values', values);
-    const data = AuthService.login(values);
-    console.log('res', data);
+    const data = await AuthService.login(values);
   });
 
   return (

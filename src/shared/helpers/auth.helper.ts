@@ -1,7 +1,7 @@
 import Cookies from 'js-cookie';
 import { localStorageWrapper } from '@/shared/helpers';
-import { UserDto } from '@/types/user.interface';
-import { IAuthResponse, ITokens } from '@/types/auth.interface';
+import { UserDto } from '@/shared/services/user/user.interface';
+import { IAuthResponse, ITokens } from '@/shared/services/auth/auth.interface';
 
 export const getAccessToken = () => Cookies.get('accessToken');
 

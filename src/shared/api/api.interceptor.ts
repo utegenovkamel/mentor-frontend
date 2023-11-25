@@ -1,10 +1,12 @@
 import axios from 'axios';
 import { errorCatch, getContentType } from '@/shared/api/api.helper';
-import { getAccessToken, removeFromStorage } from '@/shared/services/auth/auth.helper';
 import { AuthService } from '@/shared/services/auth/auth.service';
+import {getAccessToken, removeFromStorage} from "@/shared/helpers";
 
-const axiosInstance = axios.create({
-  baseURL: process.env.SERVER_URL,
+const baseURL = import.meta.env.SERVER_URL || 'http://localhost:4200/api/'
+
+export const axiosInstance = axios.create({
+  baseURL,
   headers: getContentType(),
 });
 
@@ -43,5 +45,3 @@ axiosInstance.interceptors.response.use(
     }
   }
 );
-
-export default axiosInstance;

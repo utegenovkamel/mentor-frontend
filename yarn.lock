@@ -6606,6 +6606,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"effector@npm:^22.8.7":
+  version: 22.8.7
+  resolution: "effector@npm:22.8.7"
+  checksum: 183fcb316e9720257a71b2a9001f33915cc39f0ea11d0ba2d553cfa96c241fd77fd1b152439a4cdf7853c413d944a910a536721e728f999ddd266521c4248f5f
+  languageName: node
+  linkType: hard
+
 "ejs@npm:^3.1.8":
   version: 3.1.9
   resolution: "ejs@npm:3.1.9"
@@ -9815,6 +9822,7 @@ __metadata:
     "@vitejs/plugin-react": "npm:^4.1.1"
     axios: "npm:^1.6.2"
     dayjs: "npm:^1.11.10"
+    effector: "npm:^22.8.7"
     embla-carousel-react: "npm:^8.0.0-rc14"
     eslint: "npm:^8.53.0"
     eslint-config-airbnb: "npm:19.0.4"

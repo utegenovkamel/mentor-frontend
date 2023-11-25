@@ -1,5 +1,10 @@
-import { TagDto } from '@/types/tag.interface';
-import { SocialNetworkDto } from '@/types/social-network.interface';
+import { TagDto } from '@/shared/services/tag/tag.interface';
+
+export interface SocialNetworkDto {
+  id: number
+  name: string
+  link: string
+}
 
 export interface UserDto {
   id: number;

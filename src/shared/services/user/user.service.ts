@@ -1,5 +1,5 @@
-import axiosInstance from '@/shared/api/api.interceptor';
-import { UserDto } from '@/types/user.interface';
+import {UserDto} from '@/shared/services/user/user.interface';
+import {axiosInstance} from "@/shared/api";
 
 const domainName = 'user';
 

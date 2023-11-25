@@ -1,14 +1,15 @@
 import axios from 'axios';
-import { IAuthResponse, ILoginRequest, IRegisterRequest } from '@/types/auth.interface';
-import { getRefreshToken, saveToStorage } from '@/shared/services/auth/auth.helper';
+import { IAuthResponse, ILoginRequest, IRegisterRequest } from '@/shared/services/auth/auth.interface';
 import { getContentType } from '@/shared/api/api.helper';
+import { axiosInstance } from '@/shared/api';
+import {getRefreshToken, saveToStorage} from "@/shared/helpers";
 
 const domainName = 'auth';
 
 export const AuthService = {
   async login(data: ILoginRequest) {
-    const response = await axios.post<IAuthResponse>(
-      `http://localhost:6000/api/${domainName}/login`,
+    const response = await axiosInstance.post<IAuthResponse>(
+      `${domainName}/login`,
       data
     );
 

@@ -1,9 +1,10 @@
-import { Button, Flex, Group, Stack, Title, Anchor } from '@mantine/core';
+import {Button, Flex, Group, Stack, Title, Anchor} from '@mantine/core';
 import { FormProvider, useForm } from 'react-hook-form';
 import { FormInput, FormPasswordInput, FormTagsInput, FormTextarea } from '@/components';
 import { FormDatePickerInput } from '@/components/Fields/FormDatePickerInput';
 import { Link } from 'react-router-dom';
-import React from 'react';
+import React, {useEffect} from 'react';
+import axios from 'axios';
 
 export const CreateAccountPage = () => {
   const form = useForm({
@@ -11,6 +12,16 @@ export const CreateAccountPage = () => {
   });
 
   const onSubmit = form.handleSubmit((data) => {});
+
+  const foo = async () => {
+    4;
+    const response = await axios.get(`http://localhost:4200/api/tag`);
+    console.log('foo', response.data);
+  };
+
+  useEffect(() => {
+    foo();
+  }, []);
 
   return (
     <Flex direction="column" justify="center">

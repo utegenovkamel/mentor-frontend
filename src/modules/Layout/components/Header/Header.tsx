@@ -36,14 +36,7 @@ const user = {
 };
 
 const tabs = [
-  'Home',
-  'Orders',
-  'Education',
-  'Community',
-  'Forums',
-  'Support',
-  'Account',
-  'Helpdesk',
+  'Все пользователи',
 ];
 
 export function Header() {
