@@ -1,2 +1,2 @@
-export * from './tag.service'
-export * from './tag.interface'
+export * from './service.ts'
+export * from './types.ts'

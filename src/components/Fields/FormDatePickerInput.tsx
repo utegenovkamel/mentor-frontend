@@ -1,6 +1,6 @@
 import React from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
-import { MakeRequired } from '@/shared/helpers';
+import { MakeRequired } from '~/shared/helpers';
 import { DateInput, DateInputProps } from '@mantine/dates';
 
 interface Props extends MakeRequired<DateInputProps, 'name'> {}

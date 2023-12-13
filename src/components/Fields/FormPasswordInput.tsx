@@ -1,7 +1,7 @@
 import React from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 import { PasswordInput, PasswordInputProps } from '@mantine/core';
-import { MakeRequired } from '@/shared/helpers';
+import { MakeRequired } from '~/shared/helpers';
 
 interface Props extends MakeRequired<PasswordInputProps, 'name'> {}
 

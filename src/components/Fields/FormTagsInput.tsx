@@ -1,7 +1,7 @@
 import React from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 import { TagsInput, TagsInputProps } from '@mantine/core';
-import { MakeRequired } from '@/shared/helpers';
+import { MakeRequired } from '~/shared/helpers';
 
 interface Props extends MakeRequired<TagsInputProps, 'name'> {
   urlData?: string;

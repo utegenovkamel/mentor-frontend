@@ -1,7 +1,7 @@
 import axios from 'axios';
-import { errorCatch, getContentType } from '@/shared/api/api.helper';
-import { AuthService } from '@/shared/services/auth/auth.service';
-import {getAccessToken, removeFromStorage} from "@/shared/helpers";
+import { errorCatch, getContentType } from '~/shared/api/api.helper';
+import {getAccessToken, removeFromStorage} from "~/shared/helpers";
+import {authService} from "~/shared/services";
 
 const baseURL = import.meta.env.SERVER_URL || 'http://localhost:4200/api/'
 
@@ -35,7 +35,7 @@ axiosInstance.interceptors.response.use(
       originalRequest._retry = true;
 
       try {
-        await AuthService.getNewTokens();
+        await authService.getNewTokensFx();
         return axiosInstance.request(originalRequest);
       } catch (e) {
         if (errorCatch(e) === 'jwt exprired') {
