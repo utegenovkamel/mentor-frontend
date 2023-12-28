@@ -4,11 +4,12 @@ import {RouterProvider} from "atomic-router-react";
 import { MantineProvider } from '@mantine/core';
 import {Pages} from "~/pages";
 import {router} from "~/shared/routing.ts";
-import {Layout} from "~/modules";
+import {theme} from "~/theme.ts";
+import {Layout} from "~/shared/ui";
 
 export default function App() {
   return (
-    <MantineProvider>
+    <MantineProvider theme={theme}>
       <RouterProvider router={router}>
         <Layout>
           <Pages />

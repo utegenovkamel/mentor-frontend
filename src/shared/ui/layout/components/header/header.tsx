@@ -26,8 +26,9 @@ import {
   IconSwitchHorizontal,
   IconChevronDown,
 } from '@tabler/icons-react';
-import classes from './Header.module.css';
+import classes from './header.module.css';
 import {Link} from "atomic-router-react";
+import {routes} from "~/shared/routing.ts";
 
 const user = {
   name: 'Jane Spoonfighter',
@@ -58,10 +59,10 @@ export function Header() {
           <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
 
           <Group>
-            <Button component={Link} to="/login" variant="default">
+            <Button component={Link} to={routes.auth.login} variant="default">
               Войти
             </Button>
-            <Button component={Link} to="/create-account">
+            <Button component={Link} to={routes.auth.register}>
               Создать аккаунт
             </Button>
           </Group>

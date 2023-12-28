@@ -1,5 +1,5 @@
-import {Header, Footer} from '~/modules/layout/components';
 import {AppShell, Container} from '@mantine/core';
+import {Header, Footer} from "./components";
 
 interface Props {
   children: React.ReactNode;
@@ -7,7 +7,7 @@ interface Props {
 
 export const Layout = ({children}: Props) => {
   return (
-    <AppShell layout="alt" header={{height: 98.55}}>
+    <AppShell layout="alt" header={{height: 100}}>
       <Header/>
       <AppShell.Main>
         <Container>
